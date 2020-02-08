@@ -9,6 +9,6 @@ package br.com.ifba.gf.infrastructure.service;
  *
  * @author lucio
  */
-public interface Ifacede {
+interface IFacede {
     
 }

@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ifba.gf.infrastructure.service;
+package br.com.ifba.gf.motorista.dao;
 
+import br.com.ifba.gf.infrastructure.dao.IGenericDAO;
 import br.com.ifba.gf.motorista.model.Motorista;
 
 /**
  *
- * @author lucio
+ * @author iagow
  */
-interface IFacede {
-    
-    public abstract Motorista saveMotorista(Motorista motorista);
-    
+public interface IMotoristaDAO extends IGenericDAO<Motorista> {
     
 }

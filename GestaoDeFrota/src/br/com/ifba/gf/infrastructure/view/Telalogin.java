@@ -5,6 +5,8 @@
  */
 package br.com.ifba.gf.infrastructure.view;
 
+import br.com.ifba.gf.telaprincipal.view.TelaPrincipal;
+
 /**
  *
  * @author lucio
@@ -58,11 +60,11 @@ public class Telalogin extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,6 +154,17 @@ public class Telalogin extends javax.swing.JFrame {
 
     private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
         // TODO add your handling code here:
+        
+        int usuario = 0; 
+        int senha = 0; 
+        
+        usuario = Integer.parseInt(this.user.getText());
+        senha = Integer.parseInt(this.password.getText());
+        
+        if(usuario == 1234 && senha == 1221){
+            new TelaPrincipal().setVisible(true);
+            this.dispose();
+        }
         
     }//GEN-LAST:event_BtnLoginActionPerformed
 

@@ -5,13 +5,23 @@
  */
 package br.com.ifba.gf.infrastructure.service;
 
+import br.com.ifba.gf.motorista.model.Motorista;
+import br.com.ifba.gf.motorista.service.IServiceMotorista;
+import br.com.ifba.gf.motorista.service.ServiceMotorista;
+
 /**
  *
  * @author lucio
  */
 public class Facede implements IFacede {
     
+    //-------------MOTORISTA-------------
     
+    private final IServiceMotorista serviceMotorista = new ServiceMotorista();
+    
+    public Motorista saveMotorista(Motorista motorista){
+        return this.serviceMotorista.saveMotorista(motorista);
+    }
     
 
 }

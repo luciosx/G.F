@@ -8,6 +8,9 @@ package br.com.ifba.gf.infrastructure.service;
 import br.com.ifba.gf.motorista.model.Motorista;
 import br.com.ifba.gf.motorista.service.IServiceMotorista;
 import br.com.ifba.gf.motorista.service.ServiceMotorista;
+import br.com.ifba.gf.veiculo.model.Veiculo;
+import br.com.ifba.gf.veiculo.service.IServiceVeiculo;
+import br.com.ifba.gf.veiculo.service.ServiceVeiculo;
 
 /**
  *
@@ -24,4 +27,13 @@ public class Facede implements IFacede {
     }
     
 
+    
+    
+    //-------------VEICULO-------------
+    
+    private final IServiceVeiculo serviceVeiculo = new ServiceVeiculo();
+    
+    public Veiculo saveVeiculo(Veiculo veiculo){
+        return this.serviceVeiculo.saveVeiculo(veiculo);
+    }
 }

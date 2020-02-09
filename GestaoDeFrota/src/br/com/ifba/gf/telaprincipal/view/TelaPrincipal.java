@@ -6,6 +6,7 @@
 package br.com.ifba.gf.telaprincipal.view;
 
 import br.com.ifba.gf.motorista.view.TelaMotorista;
+import br.com.ifba.gf.veiculo.view.CadastrarVeiculo;
 
 /**
  *
@@ -29,7 +30,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jButtonCadastroMotorista = new javax.swing.JButton();
+        jButtonCadastroVeiculo = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +45,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonCadastroVeiculo.setText("Cadastro de veículo");
+        jButtonCadastroVeiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroVeiculoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -47,13 +59,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jButtonCadastroMotorista)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addGap(66, 66, 66)
+                .addComponent(jButtonCadastroVeiculo)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jButtonCadastroMotorista)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonCadastroMotorista)
+                    .addComponent(jButtonCadastroVeiculo))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
 
@@ -66,6 +82,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         new TelaMotorista().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonCadastroMotoristaActionPerformed
+
+    private void jButtonCadastroVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroVeiculoActionPerformed
+        // TODO add your handling code here:
+        
+        new CadastrarVeiculo().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonCadastroVeiculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,5 +127,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastroMotorista;
+    private javax.swing.JButton jButtonCadastroVeiculo;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

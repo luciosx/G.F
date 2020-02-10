@@ -7,11 +7,14 @@ package br.com.ifba.gf.motorista.dao;
 
 import br.com.ifba.gf.infrastructure.dao.IGenericDAO;
 import br.com.ifba.gf.motorista.model.Motorista;
+import java.util.List;
 
 /**
  *
  * @author iagow
  */
 public interface IMotoristaDAO extends IGenericDAO<Motorista> {
+    
+    public abstract List <Motorista> findByCPF(String cpf);
     
 }

@@ -6,6 +6,7 @@
 package br.com.ifba.gf.telaprincipal.view;
 
 import br.com.ifba.gf.motorista.view.TelaMotorista;
+import br.com.ifba.gf.pesquisarmotorista.view.PesquisarMotorista;
 import br.com.ifba.gf.veiculo.view.CadastrarVeiculo;
 
 /**
@@ -40,11 +41,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnAtividade1 = new javax.swing.JButton();
         btnCadastro = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        btnCadCar1 = new javax.swing.JButton();
-        btnCadMororista1 = new javax.swing.JButton();
+        btnCadCar = new javax.swing.JButton();
+        btnCadMotorista = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtInfo = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
+        jButtonPesquisaMotorista = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -105,7 +107,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(btnCadastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
         jPanel3Layout.setVerticalGroup(
@@ -120,11 +122,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
-        btnCadCar1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        btnCadCar1.setText("Cadastrar Veiculo");
+        btnCadCar.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        btnCadCar.setText("Cadastrar Veiculo");
+        btnCadCar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadCarActionPerformed(evt);
+            }
+        });
 
-        btnCadMororista1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        btnCadMororista1.setText("Cadastrar Motorista");
+        btnCadMotorista.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        btnCadMotorista.setText("Cadastrar Motorista");
+        btnCadMotorista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadMotoristaActionPerformed(evt);
+            }
+        });
 
         txtInfo.setBackground(java.awt.Color.lightGray);
         txtInfo.setColumns(20);
@@ -134,6 +146,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 12)); // NOI18N
         jLabel3.setText("Informações sobre a frota");
 
+        jButtonPesquisaMotorista.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButtonPesquisaMotorista.setText("Pesquisar Motorista");
+        jButtonPesquisaMotorista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPesquisaMotoristaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -142,9 +162,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCadCar1)
-                    .addComponent(btnCadMororista1))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnCadMotorista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCadCar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonPesquisaMotorista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
@@ -162,11 +183,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(btnCadCar1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                        .addComponent(btnCadMororista1)
-                        .addGap(0, 68, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                        .addComponent(btnCadCar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCadMotorista)
+                        .addGap(53, 53, 53)
+                        .addComponent(jButtonPesquisaMotorista))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -184,6 +206,24 @@ public class TelaPrincipal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCadCarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadCarActionPerformed
+        // TODO add your handling code here:
+        new CadastrarVeiculo().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCadCarActionPerformed
+
+    private void btnCadMotoristaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadMotoristaActionPerformed
+        // TODO add your handling code here:
+        new TelaMotorista().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCadMotoristaActionPerformed
+
+    private void jButtonPesquisaMotoristaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisaMotoristaActionPerformed
+        // TODO add your handling code here:
+        new PesquisarMotorista().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPesquisaMotoristaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,11 +262,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtividade1;
-    private javax.swing.JButton btnCadCar1;
-    private javax.swing.JButton btnCadMororista1;
+    private javax.swing.JButton btnCadCar;
+    private javax.swing.JButton btnCadMotorista;
     private javax.swing.JButton btnCadastro;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnRelatorio;
+    private javax.swing.JButton jButtonPesquisaMotorista;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -11,6 +11,7 @@ import br.com.ifba.gf.motorista.service.ServiceMotorista;
 import br.com.ifba.gf.veiculo.model.Veiculo;
 import br.com.ifba.gf.veiculo.service.IServiceVeiculo;
 import br.com.ifba.gf.veiculo.service.ServiceVeiculo;
+import java.util.List;
 
 /**
  *
@@ -22,11 +23,15 @@ public class Facede implements IFacede {
     
     private final IServiceMotorista serviceMotorista = new ServiceMotorista();
     
+    @Override
     public Motorista saveMotorista(Motorista motorista){
         return this.serviceMotorista.saveMotorista(motorista);
     }
     
-
+    @Override
+    public List <Motorista> findByCPF(String cpf){
+        return this.serviceMotorista.findByCPF(cpf);
+    }
     
     
     //-------------VEICULO-------------

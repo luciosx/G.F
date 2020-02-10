@@ -9,6 +9,7 @@ import br.com.ifba.gf.infrastructure.exception.BusinessException;
 import br.com.ifba.gf.motorista.dao.IMotoristaDAO;
 import br.com.ifba.gf.motorista.dao.MotoristaDAO;
 import br.com.ifba.gf.motorista.model.Motorista;
+import java.util.List;
 
 /**
  *
@@ -32,6 +33,11 @@ public class ServiceMotorista implements IServiceMotorista{
         }
         
         return this.motoristaDAO.save(motorista);
+    }
+    
+    @Override
+    public List <Motorista> findByCPF(String cpf){
+        return this.motoristaDAO.findByCPF(cpf);
     }
     
 }

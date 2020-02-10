@@ -6,6 +6,7 @@
 package br.com.ifba.gf.motorista.service;
 
 import br.com.ifba.gf.motorista.model.Motorista;
+import java.util.List;
 
 /**
  *
@@ -15,4 +16,5 @@ public interface IServiceMotorista {
     
     public abstract Motorista saveMotorista(Motorista motorista);
     
+    public abstract List <Motorista> findByCPF(String cpf);
 }
